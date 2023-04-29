@@ -3,3 +3,11 @@ extends layout
 block content
   h1= title
   p Welcome to #{title}
+  ul 
+    each message in messages
+      li #{message.text}
+  button(onclick="redirect()") new
+  script.
+   function redirect() {
+    window.location.href = '/new'
+    }

@@ -1,0 +1,9 @@
+extends layout
+
+block content
+  form(action='/new', method='POST')
+    | name
+    input(type="text", name="name")
+    | message
+    input(type="text", name="message")
+    input(value='Submit', type='submit')
